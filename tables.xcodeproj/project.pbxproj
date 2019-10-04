@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		FD496A902343BF490046301E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD496A8F2343BF490046301E /* AppDelegate.swift */; };
-		FD496A922343BF490046301E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD496A912343BF490046301E /* ViewController.swift */; };
-		FD496A952343BF490046301E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD496A932343BF490046301E /* Main.storyboard */; };
 		FD496A972343BF490046301E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD496A962343BF490046301E /* Assets.xcassets */; };
 		FD496A9A2343BF490046301E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD496A982343BF490046301E /* LaunchScreen.storyboard */; };
+		FD496AA823466D740046301E /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD496AA623466D740046301E /* CustomTableViewCell.swift */; };
+		FD496AA923466D740046301E /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD496AA723466D740046301E /* CustomTableViewCell.xib */; };
+		FDDAFFDD2347C9C900B8226C /* CustomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDAFFDB2347C9C900B8226C /* CustomTableViewController.swift */; };
+		FDDAFFDE2347C9C900B8226C /* CustomTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDDAFFDC2347C9C900B8226C /* CustomTableViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FD496A8C2343BF490046301E /* tables.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tables.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD496A8F2343BF490046301E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FD496A912343BF490046301E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FD496A942343BF490046301E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FD496A962343BF490046301E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FD496A992343BF490046301E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FD496A9B2343BF490046301E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD496AA623466D740046301E /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		FD496AA723466D740046301E /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
+		FDDAFFDB2347C9C900B8226C /* CustomTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewController.swift; sourceTree = "<group>"; };
+		FDDAFFDC2347C9C900B8226C /* CustomTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +58,40 @@
 		FD496A8E2343BF490046301E /* tables */ = {
 			isa = PBXGroup;
 			children = (
+				FDDAFFE32347D78400B8226C /* Additional */,
+				FDDAFFCC2347BE6600B8226C /* MainView */,
+				FD496AA523466B950046301E /* Cells */,
 				FD496A8F2343BF490046301E /* AppDelegate.swift */,
-				FD496A912343BF490046301E /* ViewController.swift */,
-				FD496A932343BF490046301E /* Main.storyboard */,
-				FD496A962343BF490046301E /* Assets.xcassets */,
-				FD496A982343BF490046301E /* LaunchScreen.storyboard */,
-				FD496A9B2343BF490046301E /* Info.plist */,
 			);
 			path = tables;
+			sourceTree = "<group>";
+		};
+		FD496AA523466B950046301E /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				FD496AA623466D740046301E /* CustomTableViewCell.swift */,
+				FD496AA723466D740046301E /* CustomTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		FDDAFFCC2347BE6600B8226C /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				FDDAFFDB2347C9C900B8226C /* CustomTableViewController.swift */,
+				FDDAFFDC2347C9C900B8226C /* CustomTableViewController.xib */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
+		FDDAFFE32347D78400B8226C /* Additional */ = {
+			isa = PBXGroup;
+			children = (
+				FD496A962343BF490046301E /* Assets.xcassets */,
+				FD496A9B2343BF490046301E /* Info.plist */,
+				FD496A982343BF490046301E /* LaunchScreen.storyboard */,
+			);
+			path = Additional;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,8 +153,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD496A9A2343BF490046301E /* LaunchScreen.storyboard in Resources */,
+				FDDAFFDE2347C9C900B8226C /* CustomTableViewController.xib in Resources */,
 				FD496A972343BF490046301E /* Assets.xcassets in Resources */,
-				FD496A952343BF490046301E /* Main.storyboard in Resources */,
+				FD496AA923466D740046301E /* CustomTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,7 +166,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD496A922343BF490046301E /* ViewController.swift in Sources */,
+				FDDAFFDD2347C9C900B8226C /* CustomTableViewController.swift in Sources */,
+				FD496AA823466D740046301E /* CustomTableViewCell.swift in Sources */,
 				FD496A902343BF490046301E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,14 +175,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		FD496A932343BF490046301E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FD496A942343BF490046301E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		FD496A982343BF490046301E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -284,7 +308,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 43W32NS74J;
-				INFOPLIST_FILE = tables/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/tables/Additional/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,7 +326,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 43W32NS74J;
-				INFOPLIST_FILE = tables/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/tables/Additional/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
