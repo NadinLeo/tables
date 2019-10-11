@@ -9,6 +9,7 @@
 import UIKit
 
 class CustomTableViewController: UITableViewController {
+    let networker = Networker()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +20,7 @@ class CustomTableViewController: UITableViewController {
 
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return 50
     }
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
@@ -32,9 +33,12 @@ class CustomTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = self.tableView.dequeueReusableCell(withIdentifier: "customCell", for: indexPath)
-        cell.textLabel?.text = "Hi!!!!!"
-        cell.textLabel?.backgroundColor = .clear
+        let cell = self.tableView.dequeueReusableCell(withIdentifier: "customCell", for: indexPath) as! CustomTableViewCell
+        
+        networker.getImage(from: "https://www.humanesociety.org/sites/default/files/styles/768x326/public/2018/08/kitten-440379.jpg?h=f6a7b1af&itok=vU0J0uZR") {imageData in
+            cell.customImage.image = UIImage(data: imageData)
+        }
+        
         return cell
     }
     
